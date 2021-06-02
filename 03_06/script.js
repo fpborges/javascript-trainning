@@ -22,3 +22,8 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
+console.log("The backpack volume:", backpack["volume"]);
+
+let newVolume = "pocketNum";
+
+console.log("The backpack new volume:", backpack[newVolume]);
