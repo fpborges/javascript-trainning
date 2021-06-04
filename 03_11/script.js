@@ -39,3 +39,4 @@ const everydayPack = new Backpack(
   26,
   false
 );
+console.log(everydayPack);

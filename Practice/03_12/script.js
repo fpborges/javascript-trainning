@@ -6,3 +6,9 @@
  * - Create several objects using the class.
  * - Test the objecs by calling their properties and using their methods in the console.
  */
+
+import Videogame from "./Videogame.js";
+
+const myConsole = new Videogame("playstation", "console", 10, 3.5, new Date());
+
+console.log(myConsole);

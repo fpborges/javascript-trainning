@@ -23,4 +23,35 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  changeAttr: function (newName, vol, col, pocket) {
+    this.name = newName;
+    this.volume = vol;
+    this.color = col;
+    this.pocketNum = pocket;
+  },
 };
+
+console.log(
+  "backpack old values: ",
+  backpack.name,
+  "\n",
+  backpack.volume,
+  "\n",
+  backpack.color,
+  "\n",
+  backpack.pocketNum
+);
+
+// run method using new changes
+backpack.changeAttr("Bad Boy", 40, "black", 35);
+
+console.log(
+  "backpack new values: ",
+  backpack.name,
+  "/n",
+  backpack.volume,
+  "/n",
+  backpack.color,
+  "/m",
+  backpack.pocketNum
+);
