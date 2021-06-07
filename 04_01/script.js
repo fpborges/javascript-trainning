@@ -33,7 +33,7 @@ const content = `
     </main>
 `;
 
-const test = "this is a test";
+const test = "this is a test in the DOM";
 
 document.getElementById("main").innerHTML = content;
 
