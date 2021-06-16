@@ -50,4 +50,13 @@ const content = `
   </article>
 `;
 
+const newText = document.createElement("article");
+
+newText.classList.add("backpack-2");
+newText.setAttribute("id", "everyday");
+
+newText.innerHTML = content;
+
 main.innerHTML = content;
+
+main.append(newText);

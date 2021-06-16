@@ -47,11 +47,19 @@
             Left strap length: <span>26 inches</span>
             <form class="leftlength" data-children-count="1">
               <input
-                type="number"
+                type="text"
+                id="colorText"
                 name="leftLength"
                 placeholder="New left length"
               />
-              <button>Update</button>
+              <input
+                id="clickMe"
+                type="button"
+                value="clickme"
+                onclick="changeColor();"
+              />
+              <h1 onclick="changeText(this)">Click on this text!</h1>
+              <button onclick="changeColor()">Update</button>
             </form>
           </li>
           <li class="feature backpack__strap" data-side="right">
