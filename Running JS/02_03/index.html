@@ -6,5 +6,48 @@
     <title>Module demo</title>
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <container>
+      <div class="square1">
+        <div class="circle1"></div>
+      </div>
+      <div class="square2">
+        <div class="circle2"></div>
+      </div>
+    </container>
+    <style>
+      .square1 {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin-right: 5px;
+        float: left;
+        text-align: center;
+      }
+      .circle1 {
+        border: 1px solid green;
+        border-radius: 20px;
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        background-color: green;
+        vertical-align: middle;
+      }
+
+      .square2 {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin-left: 5px;
+        float: left;
+      }
+      .circle2 {
+        border: 1px solid green;
+        border-radius: 20px;
+        background-color: green;
+        width: 45px;
+        height: 45px;
+      }
+    </style>
+  </body>
 </html>

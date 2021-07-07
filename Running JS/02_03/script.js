@@ -48,3 +48,18 @@ const markup = (backpack) => {
 const main = document.createElement("main");
 main.innerHTML = markup(backpack);
 document.body.appendChild(main);
+
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    let str = "";
+    if (i % 3 == 0) {
+      str += " fizz";
+    }
+    if (i % 5 == 0) {
+      str += " buzz";
+    }
+    console.log(i + str);
+  }
+}
+
+fizzBuzz();
