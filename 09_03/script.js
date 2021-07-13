@@ -6,44 +6,77 @@
 import backpackObjectArray from "./components/data.js";
 
 const backpackList = backpackObjectArray.map((backpack) => {
-  let backpackArticle = document.createElement("article");
-  backpackArticle.classList.add("backpack");
-  backpackArticle.setAttribute("id", backpack.id);
+	let backpackArticle = document.createElement("article");
+	backpackArticle.classList.add("backpack");
+	backpackArticle.setAttribute("id", backpack.id);
 
-  backpackArticle.innerHTML = `
+	backpackArticle.innerHTML = `
     <figure class="backpack__image">
       <img src=${backpack.image} alt="" loading="lazy" />
     </figure>
     <h1 class="backpack__name">${backpack.name}</h1>
     <ul class="backpack__features">
       <li class="feature backpack__volume">Volume:<span> ${
-        backpack.volume
-      }l</span></li>
+				backpack.volume
+			}l</span></li>
       <li class="feature backpack__color">Color:<span> ${
-        backpack.color
-      }</span></li>
+				backpack.color
+			}</span></li>
       <li class="feature backpack__age">Age:<span> ${backpack.backpackAge()} days old</span></li>
       <li class="feature backpack__pockets">Number of pockets:<span> ${
-        backpack.pocketNum
-      }</span></li>
+				backpack.pocketNum
+			}</span></li>
       <li class="feature backpack__strap">Left strap length:<span> ${
-        backpack.strapLength.left
-      } inches</span></li>
+				backpack.strapLength.left
+			} inches</span></li>
       <li class="feature backpack__strap">Right strap length:<span> ${
-        backpack.strapLength.right
-      } inches</span></li>
+				backpack.strapLength.right
+			} inches</span></li>
       <li class="feature backpack__lid">Lid status: <span>${
-        backpack.lidOpen ? "open" : "closed"
-      }</span></li>
+				backpack.lidOpen ? "open" : "closed"
+			}</span></li>
     </ul>
     <button class="lid-toggle">Open lid</button>
   `;
 
-  return backpackArticle;
+	const button = backpackArticle.querySelector(".lid-toggle");
+	const status = backpackArticle.querySelector(".backpack__lid span");
+
+	button.addEventListener(
+		"click",
+		(event) => {
+			console.log(event);
+			status.innerText === "open"
+				? (status.innerText = "close")
+				: (status.innerText = "open");
+		},
+		false
+	);
+
+	button.addEventListener(
+		"mouseover",
+		() => {
+			console.log("mouse entered");
+			button.style.backgroundColor === "green"
+				? (button.style.backgroundColor = "blue")
+				: (button.style.backgroundColor = "green");
+		},
+		false
+	);
+
+	button.addEventListener(
+		"mouseleave",
+		() => {
+			button.style.backgroundColor = "blue";
+		},
+		false
+	);
+
+	return backpackArticle;
 });
 
 const main = document.querySelector(".maincontent");
 
 backpackList.forEach((backpack) => {
-  main.append(backpack);
+	main.append(backpack);
 });

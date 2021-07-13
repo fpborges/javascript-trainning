@@ -23,7 +23,7 @@ button.innerHTML = btn.btnText;
 
 button.setAttribute(btn.attr, btn.attrName);
 
-mainPoint.appendChild(button);
+mainPoint.append(button);
 
 function addParagraph() {
 	let obj = {
